@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Bosh sahifa{% endblock title %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+                <p class="container">
+  Kitob —axborotlarni, gʻoya, obraz va bilimlarni saqlash hamda tarqatish, ijtimoiy-siyosiy, ilmiy, estetik qarashlarni shakllantirish vositasi; bilimlar targʻiboti va tarbiya quroli; badiiy, ilmiy asar, ijtimoiy adabiyot. Xalqaro statistikada YUNESKO tavsiyasiga koʻra, hajmi 48 sahifadan kam boʻlmagan, taboqlab tikilgan nodavriy nashrni, shartli ravishda, K. deyish qabul qilingan.
+
+K. ishi K.ni yaratish, tayyorlash, uni tarqatish, saqlash, tavsiflash va oʻrganish bilan bogʻliq katta jarayonni oʻz ichiga oladi. Fan, adabiyot, sanʼat asarlaridan matbaada koʻpaytirish va tarkatish uchun tanlash, ularga ilmiy va badiiy nuqtai nazardan yondoshish, tahrir qilish, badiiy bezash, matbaa ijrosini belgilash va nashrga tayyorlash noshirlikning vazifasi. K.ni koʻplab chiqarish — kitob bosish ishi poligrafiya sanoatida olib boriladi. K.larni toʻplash, saqlash, oʻquvchilar oʻrtasida tashviqot qilish, ulardan kitobxonlar foydalanishlari uchun qulay sharoit yaratish kutubxona ishiga qaraydi (qarang Kutubxona, Kutubxonashunoslik). K. va boshqa bosma asarlar haqida muayyan maqsad bilan oʻquvchilarga maʼlumot berish va ularni tashviqot qilish bibliografiya vazifasidir va h.k.
+
+K.ning paydo boʻlish tarixi yozuvning yaratilishi va shakllanishi jarayoni bilan uzviy bogʻliq. Yozuvning toʻzilish xususiyatlari (belgilar tizimi, ularning joylashish tartibi), yozuv materiali va qurolining oʻziga xos tomoni va boshqa maʼlum darajada K. tuzilishini ham belgilab berdi. Qad. Misr, Rim, Yunoniston va Oʻrta Osiyoda kishilar tosh, palma daraxti barglari, sopol va boshqa materiallarga yozib fikr almashganlar. Har bir K. oʻnlab shunday materiallardan tayyorlangan plitalardan iborat boʻlib, ogʻirligi bir necha kg boʻlgan. Yozuv materiali sifatida papirus usimligi ishlatilishi (miloddan avvalgi 4—3 ming yilliklarda) bilan oʻrama K.lar paydo boʻldi. Bunday K.larning oʻzunligi oʻrtacha 10 m atrofida boʻlib, ingichka, yumaloq tayoqlarga oʻralgan va maxsus charm yoki yogʻoch gʻiloflarda saqlangan. Sharq mamlakatlari, Qad- Rim va Yunonistondagi koʻpgina nodir asarlar papirusga bitilgan. Miloddan avvalgi II asrga kelib K. materiali sifatida pergament (teri)dan foydalanish keng tarqaldi. Dastlab bunday K. oʻrama holda saqlangan. Ayrim maʼlumotlarga Qaraganda, Oʻrta Osiyoda, xususan, Xorazmda miloddan avvalgi 1-ming yillikning 1-yarmida vujudga kelgan zardoʻshtiylik dinining muqaddas kitoblaridan Avestoning qad. nusxasi ham 12 ming qora mol terisiga bitilgan. Arablarning Oʻrta Osiyodagi istilosiga qadar (8—10-asrlar) u yerda koʻp nodir K.lar saqlangan kutubxonalar boʻlgan. Lekin ularning koʻpi bosqinchilik urushlari natijasida yoʻqotib yuborilgan. 2—4-asrlardan boshlab Qad. Rimda xuddi hozirgi K.larning varaqalari singari buklab, tikib tayyorlangan va bir-biriga biriktirilgan, muqovali K.lar — kodeks paydo boʻldi. Ular dastlab papirus, soʻng pergamentga yozilgan. Bunday K.lar ogʻir va besunaqay edi. 6-asrdan boshlab kodeks shakli asosida hozirgi koʻrinishdagi K.lar paydo boʻldi. Teriga ishlangan noyob K.lardan biri — Mus-hafi Usmon Kurʼonidir. Qurʼoni karimning bu nusxasi 644—656 yillarda xalifa Usmon koʻrsatmasi bilan Muhammad (sav)ning kotiblari Zayd ibn Sobit, Amir ibn alOʻs va Hishom ibn Hakimlar tomonidan kufiy xatida yozilgan. Mazkur qoʻlyozma K. Amir Temur tomonidan Samarqandga olib kelingan. Jami 353 varaq, hajmi 68x53x22 sm. Oʻzbekiston musulmonlari idorasi kutubxonasida saqlanadi.
+
+Qogʻozning kashf qilinishi K. tarixida yangi davr ochdi. Ayrim maʼlumotlarga qaraganda, 650 yillardayoq Samarqandda qogʻozli K.lar boʻlgan. 13-asrdan Yevropada qogʻoz asosiy yozuv materiali boʻlib qoldi. Qogʻoz K.ning koʻpayishiga va tarqalishiga yangi imkoniyat ochdi. K. bezashga alohida ahamiyat berildi. Uning sahifalariga turli miniatyuralar, hoshiyalariga bezaklar ishlana boshladi. Asta-sekin xattotlik (kalligrafiya), muqovasozlik kabi kasblar ajralib chiqdi. Ayniqsa, Oʻrta Osiyoda oʻrta asrlarda xattotlik sanʼati keng rivojlandi. Mashhur xattotlarning koʻp avlodlari K. tayyorlash usulini — materiallar, siyoh, xat koʻchirish texnikasini takomillashtirib bordilar.
+                </p>
+{% else %}
+
+<div class="my-5 mx-5 row">
+        <div class="col-3 my-5 mx-5">
+     <a  class="d-block p-2 text-bg-info" href="{% url 'login' %}">Kirish</a>
+  <br>
+    <a class="d-block p-2 text-bg-success " href="{% url 'signup' %}">Ro`yxatdan o`tish</a>
+        </div>
+</div>
+
+
+{% endif %}
+
+{%  endblock content %}
+
+
+
+
+

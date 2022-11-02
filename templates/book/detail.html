@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Detail{% endblock title %}
+
+{% block content %}
+
+<h2>
+    {{ book.title }}
+</h2>
+
+<p class="fw-normal">
+    {{ book.description }}
+</p>
+<h4>ISBN<span class="fw-bold">{{ book.isbn }}</span></h4>
+    <h3 class="fw-bold">
+        {{ book.author }}
+    </h3>
+    <img src="{{ book.photo.url }}">
+
+    <div class="row mb-4">
+        <div class="col-6">
+            <form method="post" action="{% url 'reviews' book.id %}">
+                {% csrf_token %}
+               {{ review_form | crispy }}
+                <button class="btn btn-success">Jo`natish</button>
+            </form>
+        </div>
+    </div>
+
+
+<h4>Izohlar</h4> <hr>
+    {% for review in book.bookreview_set.all %}
+
+        <div class="row mb-3">
+
+            <div class="col-7">
+                <b>{{ review.user.username }} </b> <span class="fw-light">{{ review.created_at }}</span>
+            <p class="fst-italic">{{ review.comment }}</p>
+            </div>
+
+        </div>
+
+    {% endfor %}
+{%  endblock content %}

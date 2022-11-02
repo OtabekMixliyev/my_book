@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock title %}
+
+{% block content %}
+<h4>Foydalanuvchi:  <span class="fst-italic">{{ request.user.username}}</span></h4>
+<h4>Ismingiz: <span class="fst-italic"> {{ request.user.first_name}}</span></h4>
+<h4>Familiyangiz: <span class="fst-italic"> {{ request.user.last_name}}</span></h4>
+<h4>Emailingiz: <span class="fst-italic">{{ request.user.email}}</span></h4>
+
+{%  endblock content %}

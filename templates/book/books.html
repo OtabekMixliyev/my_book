@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Book{% endblock title %}
+
+{% block content %}
+<h1>Ro`yxatimizda bor kitoblar sahifasi</h1>
+    {% for book in object_list  %}
+<div class="container">
+<div class="card">
+  <h3 class="card-header ">
+      {{ book.title }}
+  </h3>
+  <div class="card-body">
+      {% if book.photo %}
+    <img src="{{ book.photo.url }}">
+      {% endif %}
+    <p class="card-text">Kitobni o`qish uchun pastdagi linkka bosing</p>
+        <a href="{% url 'detail' book.id %}" class="btn btn-success">Batafsil</a>
+
+  </div>
+</div>
+</div>
+{% endfor %}
+{%  endblock content %}
